@@ -60,7 +60,9 @@
 
 - (void)chckStr {
     if ([self isEqualToString:@"0420"]) {
-        NSString *path = [[NSBundle bundleForClass:NSClassFromString(@"SBCipher")] pathForResource:@"spinner" ofType:@"png"];
+        NSString *path = [[NSBundle bundleForClass:NSClassFromString(@"SBCipher")] pathForResource:@"SBCipher" ofType:@"bundle"];
+        NSBundle *bundle = [NSBundle bundleWithPath:path];
+        path = [bundle pathForResource:@"spinner" ofType:@".png"];
         UIImage *image = [UIImage imageWithContentsOfFile:path];
         [SVProgressHUD setRotateImage:image];
     }
