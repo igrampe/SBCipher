@@ -7,6 +7,8 @@
 //
 
 #import "SBViewController.h"
+#import <SBCipher/SBCipher.h>
+#import <SBProgressHUD/SVProgressHUD.h>
 
 @interface SBViewController ()
 
@@ -17,7 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [SBCipher hexSha512:@"0420" isHex:NO];
+    [SVProgressHUD show];
 }
 
 - (void)didReceiveMemoryWarning
