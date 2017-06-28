@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SBCipher_Example' do
+  pod 'SBCipher', :path => '../'
+
+  target 'SBCipher_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
