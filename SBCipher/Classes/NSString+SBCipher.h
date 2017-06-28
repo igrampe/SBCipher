@@ -13,5 +13,6 @@
 - (NSData *)hexToBytes;
 + (NSString *)toHexString:(unsigned char*)data length:(unsigned int)length;
 - (NSString *)toHexString;
++ (NSString *)stringFromHexString:(NSString *)hexString;
 
 @end
